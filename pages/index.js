@@ -34,7 +34,7 @@ const callGenerateEndpoint = async () => {
   return (
     <div className="root">
       <Head>
-        <title>Cover Letter</title>
+        <title>Cover Letter by Will</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -50,16 +50,45 @@ const callGenerateEndpoint = async () => {
         </div>
       </div>
       <div className="prompt-container">
+      <div className="output-header">
+        <h3>Job Description:</h3>
+      </div>
           <textarea placeholder="Paste Job Description" className="prompt-box" value={userInput}
   onChange={onUserChangedText} />
   <div className="prompt-buttons">
-    <a className="generate-button" onClick={callGenerateEndpoint}>
-      <div className="generate">
-        <p>Generate</p>
+  <a
+    className={isGenerating ? 'generate-button loading' : 'generate-button'}
+    onClick={callGenerateEndpoint}
+  >
+    <div className="generate">
+    {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+    </div>
+  </a>
+    </div>
+    <div className="output">
+    <div className="output-header-container">
+      <div className="output-header">
+        <h3>Cover Letter:</h3>
       </div>
-    </a>
+    </div>
+    <div className="output-content">
+      <p>{apiOutput}</p>
+    </div>
     </div>
         </div>
+
+
+        <div className="badge-container grow">
+        <a
+          href="https://www.linkedin.com/in/will-gordon1/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="badge">
+            <p>built by Will</p>
+          </div>
+        </a>
+      </div>
     </div>
   );
 };

@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+@import url("https://rsms.me/");
+@import url("https://rsms.me/inter/inter.css");
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .root {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: coral;
+    background-color: #CBF7ED;
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -40,30 +42,29 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: darkblue
+    color: #424874
 }
 
 .header-title {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 .header-title h1 {
     width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 82px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
-    margin-bottom: 10 px;
 }
 
 .header-subtitle h2 {
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
+    color: #23395B;
 }
 
 .prompt-container {
@@ -79,12 +80,12 @@ body {
 }
 
 .prompt-box {
-    border-bottom-width: 1px;
+    border-bottom-width: 3px;
     border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
+    border-left-width: 3px;
+    border-right-width: 3px;
     border-style: solid;
-    border-top-width: 1px;
+    border-top-width: 3px;
     place-content: flex-start;
     align-items: flex-start;
     background-color: rgba(255, 255, 255, 0.05);
@@ -108,7 +109,7 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
     text-align: start;
-    color:rgba(255, 255, 255, 0.75);
+    color: black;
     text-decoration: none;
     text-transform: none;
 }
@@ -119,7 +120,7 @@ textarea {
 
 
 .prompt-box:focus {
-    border-color:rgba(255, 255, 255, 0.75)
+    border-color:rgba(255, 255, 255, 0.75);
 }
 
 
@@ -137,6 +138,7 @@ textarea {
     position: relative;
     width: 100%;
 }
+
 
 .key-stroke {
     outline: none;
@@ -172,7 +174,7 @@ textarea {
 .generate-button {
     place-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(255, 79, 18);
+    background-color: #406E8E;
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
@@ -186,6 +188,10 @@ textarea {
     width: min-content;
     will-change: transform;
     cursor: pointer;
+}
+
+.generate-button:hover{
+    background-color: #6b88a8;
 }
 
 .generate {
@@ -304,7 +310,7 @@ textarea {
     letter-spacing: 0px;
     line-height: 1.4em;
     text-align: start;
-    color: #ffffff;
+    color: #23395B;
     text-decoration: none;
     text-transform: none;
     margin: 0;
@@ -313,17 +319,21 @@ textarea {
 .output-content {
     outline: none;
     display: flex;
+    align-items: flex-start;
     /* max-width: 25%; */
     flex-direction: column;
     justify-content: flex-start;
     flex-shrink: 0;
     transform: none;
+    text-align: left;
+    margin-bottom: 50px;
+    border: 1px black;
 }
 
 .output-content p {
-    text-align: center;
+    text-align: left;
     white-space: pre-line;
-    color: rgba(255, 255, 255, 0.5);
+    color: black;
 }
 
 @media (min-width: 810px) and (max-width: 1199px) {
